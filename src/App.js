@@ -23,7 +23,7 @@ function App() {
         <ToastContainer position="bottom-center" limit={1} />
         <NavBarComponent />
         <main>
-          <Container className="padding-top">
+          <Container className="padding-top" >
             <Routes>
               <Route path="/product/:token" element={<ProductPage />}></Route>
               <Route path="/cart" element={<CartPage />} />
