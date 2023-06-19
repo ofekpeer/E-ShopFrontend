@@ -54,9 +54,17 @@ function HomePage() {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <Row className='center'>
+          <Row className="center">
             {products.map((product) => (
-              <Col key={product.token} xl={3} lg={3} md={4} sm={6} xs={6} className="mb-3 savesize">
+              <Col
+                key={product.token}
+                xl={3}
+                lg={3}
+                md={4}
+                sm={2}
+                xs={2}
+                className="mb-3 savesize"
+              >
                 <Product product={product}></Product>
               </Col>
             ))}
