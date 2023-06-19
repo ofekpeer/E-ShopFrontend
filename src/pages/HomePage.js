@@ -62,7 +62,7 @@ function HomePage() {
                 lg={3}
                 md={4}
                 sm={6}
-                xs={7}
+                xs={6}
                 className="mb-3 savesize"
               >
                 <Product product={product}></Product>
