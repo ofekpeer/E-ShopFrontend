@@ -20,6 +20,8 @@ main {
 .product {
   border: 1px solid;
   margin: 1px;
+  min-width: 170px;
+
 }
 
 .product img {
