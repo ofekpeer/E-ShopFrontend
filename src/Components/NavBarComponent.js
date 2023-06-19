@@ -7,6 +7,7 @@ import { useContext, useState } from 'react';
 import { Store } from '../Store';
 import axios from 'axios';
 import SearchBox from './SearchBox';
+import { TiUserOutline } from "react-icons/ti";
 
 export default function NavBarComponent() {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ export default function NavBarComponent() {
       <NavBar className="sticky" bg="dark" variant="dark">
         <Container>
           {search.pathname !== '/' && search.pathname !== '/shipping' ? (
-            <div className="text-center pe-3 mb-2">
+            <div className="back-icon text-center pe-3 mb-2">
               <Link className="nav-link" onClick={() => navigate(-1)}>
                 <i className="fa fa-arrow-left text-white"></i>
               </Link>
@@ -76,9 +77,11 @@ export default function NavBarComponent() {
               />
             </NavBar.Brand>
           </LinkContainer>
+          <div className='search'>
           <SearchBox/>
-          <Nav className="ms-auto w-50 justify-content-end">
-            <Link to="/cart" className="nav-link">
+          </div>
+          <Nav className="ms-auto justify-content-end">
+            <Link style={{width: '60px'}} to="/cart" className="nav-link">
               <i
                 className="fas fa-shopping-cart"
                 onDragOver={(event) => allowDrop(event)}
@@ -114,7 +117,7 @@ export default function NavBarComponent() {
             </NavDropdown>
           ) : (
             <Link className="nav-link text-white" to="/signin">
-              Sign In
+              <TiUserOutline style={{fontSize: 26}}></TiUserOutline>
             </Link>
           )}
         </Container>

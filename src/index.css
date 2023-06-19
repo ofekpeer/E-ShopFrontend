@@ -151,3 +151,11 @@ footer a:hover {
 .text-bold {
   font-weight: bold;
 }
+
+.search{ width: 100%;}
+@media (max-width: 400px) {
+  .back-icon{
+    display: none;
+  }
+  .search{display: none;}
+}

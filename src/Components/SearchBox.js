@@ -3,8 +3,7 @@ import { Form } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import {useNavigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 function SearchBox() {
   const navigate = useNavigate();
@@ -16,7 +15,7 @@ function SearchBox() {
   };
 
   return (
-    <Form onSubmit={submitHandler} className="d-flex me-auto w-50">
+    <Form onSubmit={submitHandler} className="d-flex me-auto w-100">
       <InputGroup>
         <FormControl
           aria-describedby="button-search"
