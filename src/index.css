@@ -25,6 +25,7 @@ main {
 .product img {
   height: 200px;
   max-width: 190px;
+  object-fit: contain;
 }
 
 .product-desc {
