@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px solid;
+  margin: 1px;
+}
+
+.product img {
+  height: 200px;
+  max-width: 190px;
+}
+
+.product-desc {
+  padding: 1rem;
+  justify-content: end;
+}
+
+.side-allpage {
+  min-height: 100vh;
+}
+
+.rating span {
+  color: #ffc000;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  background-color: #f0c040;
+  color: #000000;
+  border-width: 0px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #d3a62c;
+}
+
+.product-card {
+  transition: box-shadow 0.1s ease-in-out, transition 0.2s ease-in-out;
+  max-width: 260px;
+}
+
+.product-card:hover {
+  box-shadow: 10px 10px 10px #888888;
+  transform: scale(1.02);
+}
+
+.img-large {
+  width: 100%;
+}
+
+.icon {
+  height: 100%;
+  width: 90px;
+}
+
+.img-thumbnail {
+  height: 80px;
+}
+
+.small-container {
+  max-width: 600px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.padding-top {
+  padding-top: 65px;
+}
+
+footer {
+  border-top: 1px solid black;
+}
+
+footer * {
+  justify-content: center;
+}
+
+.dark {
+  background-color: #212529;
+  color: azure;
+}
+
+footer a {
+  color: rgb(167, 167, 167);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(197, 197, 197);
+}
+
+.center {
+  justify-content: center;
+}
+
+.ofek {
+  padding: 0px;
+}
+
+.center-img {
+  text-align: center;
+}
+
+.checkout-steps > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #f08000;
+  color: #f08000;
+}
+
+.oneline {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.highlight-current-page {
+  background-color: #f0c040 !important;
+  color: #000000 !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
