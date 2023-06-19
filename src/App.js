@@ -18,7 +18,7 @@ import SearchPage from './pages/SearchPage';
 function App() {
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="d-flex flex-column side-allpage">
         <ToastContainer position="bottom-center" limit={1} />
         <NavBarComponent />
