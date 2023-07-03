@@ -100,13 +100,6 @@ export default function NavBarComponent() {
               title={userInfo.name}
               id="basic-nav-dropdown"
             >
-              <LinkContainer to="/profile">
-                <NavDropdown.Item>User profile</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/orderhistory">
-                <NavDropdown.Item>Order history</NavDropdown.Item>
-              </LinkContainer>
-              <NavDropdown.Divider />
               <Link
                 onClick={signoutHandler}
                 to="#singout"
