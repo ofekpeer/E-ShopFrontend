@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -28,6 +28,10 @@ function HomePage() {
     products: [],
   });
 
+  const [img, setImg] = useState(
+    'https://m.media-amazon.com/images/I/71AilmPhRbL._SX3000_.jpg'
+  );
+
   useEffect(() => {
     const getProducts = async () => {
       dispatch({ type: 'GET REQUEST' });
@@ -38,16 +42,44 @@ function HomePage() {
         dispatch({ type: 'GET FAIL', payload: getError(error) });
       }
     };
-
+    let interval = changeImage();
     getProducts();
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
+  const images = [
+    'https://m.media-amazon.com/images/I/71AilmPhRbL._SX3000_.jpg',
+    'https://m.media-amazon.com/images/I/810YZUC3WwL._SX3000_.jpg',
+    'https://m.media-amazon.com/images/I/810YZUC3WwL._SX3000_.jpg',
+    'https://m.media-amazon.com/images/I/810YZUC3WwL._SX3000_.jpg',
+    'https://m.media-amazon.com/images/I/810YZUC3WwL._SX3000_.jpg',
+    'https://m.media-amazon.com/images/I/8177qqPydXL._SX3000_.jpg',
+    'https://m.media-amazon.com/images/I/61PRFOFwuRL._SX3000_.jpg',
+  ];
+
+  const changeImage = () => {
+    let numOfImg = 0;
+    const interval = setInterval(() => {
+      if (numOfImg < images.length) {
+        setImg(images[numOfImg]);
+        console.log(numOfImg);
+        numOfImg++;
+      } else numOfImg = 0;
+    }, 3000);
+    return interval;
+  };
 
   return (
     <div>
       <Helmet>
         <title>amazon</title>
       </Helmet>
-      <h1>Products</h1>
+      <div className="home-img">
+        <img className="img-home-real" alt="img" src={img} />
+      </div>
       <div className="products">
         {loading ? (
           <Loading></Loading>
