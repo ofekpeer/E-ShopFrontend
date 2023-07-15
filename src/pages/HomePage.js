@@ -65,7 +65,6 @@ function HomePage() {
     const interval = setInterval(() => {
       if (numOfImg < images.length) {
         setImg(images[numOfImg]);
-        console.log(numOfImg);
         numOfImg++;
       } else numOfImg = 0;
     }, 3000);
