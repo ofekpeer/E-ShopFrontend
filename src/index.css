@@ -72,6 +72,7 @@ main {
 .icon {
   height: 100%;
   width: 90px;
+  padding-top: 12px;
 }
 
 .img-thumbnail {
@@ -152,10 +153,14 @@ footer a:hover {
   font-weight: bold;
 }
 
-.search{ width: 100%;}
+.search {
+  width: 100%;
+}
 @media (max-width: 400px) {
-  .back-icon{
+  .back-icon {
     display: none;
   }
-  .search{display: none;}
+  .search {
+    display: none;
+  }
 }
