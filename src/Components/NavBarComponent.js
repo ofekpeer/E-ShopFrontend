@@ -7,7 +7,7 @@ import { useContext, useState } from 'react';
 import { Store } from '../Store';
 import axios from 'axios';
 import SearchBox from './SearchBox';
-import { TiUserOutline } from "react-icons/ti";
+import { TiUserOutline } from 'react-icons/ti';
 
 export default function NavBarComponent() {
   const navigate = useNavigate();
@@ -72,16 +72,18 @@ export default function NavBarComponent() {
             <NavBar.Brand>
               <img
                 className="icon"
-                src="https://www.pinclipart.com/picdir/big/57-576184_view-our-amazon-storefront-amazon-logo-white-png.png"
+                src={
+                  window.location.origin + '/Amazon-Logo-1024x373-400x146.png'
+                }
                 alt="E-Shop"
               />
             </NavBar.Brand>
           </LinkContainer>
-          <div className='search'>
-          <SearchBox/>
+          <div className="search">
+            <SearchBox />
           </div>
           <Nav className="ms-auto justify-content-end">
-            <Link style={{width: '60px'}} to="/cart" className="nav-link">
+            <Link style={{ width: '60px' }} to="/cart" className="nav-link">
               <i
                 className="fas fa-shopping-cart"
                 onDragOver={(event) => allowDrop(event)}
@@ -110,7 +112,7 @@ export default function NavBarComponent() {
             </NavDropdown>
           ) : (
             <Link className="nav-link text-white" to="/signin">
-              <TiUserOutline style={{fontSize: 26}}></TiUserOutline>
+              <TiUserOutline style={{ fontSize: 26 }}></TiUserOutline>
             </Link>
           )}
         </Container>
