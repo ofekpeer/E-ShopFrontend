@@ -202,9 +202,10 @@ footer a:hover {
   }
 }
 
-@media (max-width: 327px) {
+@media (max-width: 352px) {
   .btn-primary,
-  .btn-outline-primary {
+  .btn-outline-primary,
+  .btn-light {
     font-size: 12px;
   }
 }
