@@ -201,3 +201,10 @@ footer a:hover {
     padding-top: 108px;
   }
 }
+
+@media (max-width: 327px) {
+  .btn-primary,
+  .btn-outline-primary {
+    font-size: 12px;
+  }
+}
