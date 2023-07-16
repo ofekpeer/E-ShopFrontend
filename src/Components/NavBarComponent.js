@@ -72,13 +72,11 @@ export default function NavBarComponent() {
             <NavBar.Brand>
               <img
                 className="icon"
-                src={
-                  window.location.origin + '/Amazon-Logo-1024x373-400x146.png' || 'https://th.bing.com/th/id/R.1a7d775d8d218f2393fd8848a386ef6e?rik=7TbtU1w9lgPMvQ&pid=ImgRaw&r=0'
-                }
+                src="https://th.bing.com/th/id/R.1a7d775d8d218f2393fd8848a386ef6e?rik=7TbtU1w9lgPMvQ&pid=ImgRaw&r=0"
                 alt="E-Shop"
               />
             </NavBar.Brand>
-          </LinkContainer>
+          </LinkContainer>s
           <div className="search">
             <SearchBox />
           </div>
